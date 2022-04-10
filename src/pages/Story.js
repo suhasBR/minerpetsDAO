@@ -119,6 +119,26 @@ function Story() {
 
       changePosts([...posts,body]);
 
+      //store the post data on IPFS over Pinata
+
+      const url = `https://api.pinata.cloud/pinning/pinJSONToIPFS`;
+    return axios
+        .post(url, body, {
+            headers: {
+                pinata_api_key: process.env.PINATA_API_KEY,
+                pinata_secret_api_key: process.env.PINATA_API_SECRET
+            }
+        })
+        .then(function (response) {
+            console.log(response);
+            alert('stored a copy of your post in IPFS')
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+
+
 
 
     } catch (error) {
