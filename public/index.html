@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./images/landing/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="Minerpet DAO"
+      content="DAO for collaborative story building"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto Mono"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alata"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script>
+      (function (d, s) {
+        var js = d.createElement(s),
+          sc = d.getElementsByTagName(s)[0];
+        js.src = "https://paywall.unlock-protocol.com/static/unlock.latest.min.js";
+        sc.parentNode.insertBefore(js, sc);
+      })(document, "script");
+    </script>
+    <script>
+      var unlockProtocolConfig = {
+       
+        locks: {
+          '0x2A5fBdF94A7f6952B73c11dBb964e9EF7EE60906': {
+            network: 4,
+            name: 'Minerpets Community',
+          },
+        },
+        icon: 'https://unlock-protocol.com/images/svg/unlock-word-mark.svg',
+        callToAction: {
+          default:
+            'Please Unlock things!',
+        },
+      }
+    </script>
+ 
+    <title>Story Building DAO</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+ 
+  </body>
+</html>
